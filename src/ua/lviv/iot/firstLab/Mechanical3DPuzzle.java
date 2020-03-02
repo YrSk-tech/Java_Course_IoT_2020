@@ -137,9 +137,9 @@ public class Mechanical3DPuzzle {
 
 	@Override
 	public String toString() {
-		return "Mechanical3DPuzzle [amountOfElements=" + amountOfElements + "\n" + ", guaranteeInMounts="
-				+ guaranteeInMounts + ", material=" + material + "\n" + ", typeOfPazzle=" + typeOfPazzle + ", colour="
-				+ colour + "\n" + ", priceInHrynnia=" + priceInHrynnia + ", weightInGrams=" + weightInGrams + "\n"
+		return "Mechanical3DPuzzle [amount of elements=" + amountOfElements + "\n" + ", guarantee in mounts="
+				+ guaranteeInMounts + ", material=" + material + "\n" + ", type of pazzle=" + typeOfPazzle + ", colour="
+				+ colour + "\n" + ", price in hrynnia=" + priceInHrynnia + ", weight in grams=" + weightInGrams + "\n"
 				+ ", Child's age=" + childAge + ", description=" + description + "]";
 	}
 
