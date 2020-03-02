@@ -1,20 +1,28 @@
 package ua.lviv.iot.firstLab;
 
 public class Mechanical3DPuzzle {
-	private int amountOfElements = 1000;
-	private int guaranteeInMounts = 12;
-	private String material = "wood";
-	private String typeOfPazzle = "building" ;
-	private String colour = "wooden";
-	private double priceInHrynnia = 450;
-	private double weightInGrams = 370;
+	private int amountOfElements;
+	private int guaranteeInMounts;
+	private String material;
+	private String typeOfPazzle;
+	private String colour;
+	private double priceInHrynnia;
+	private double weightInGrams;
 	private static int id = 255468;
 
-	protected String age = "16+";
-	protected String description = "Notre-Dame de Paris";
+	protected String childAge;
+	protected String description;
 
-	public Mechanical3DPuzzle(int amountOfElements, int guaranteeInMounts, String material, String typeOfPazzle, String colour,
-			double priceInHrynnia, double weightInGrams, String age, String description) {
+	public Mechanical3DPuzzle() {
+		this(0, 0, null, null);
+	}
+
+	public Mechanical3DPuzzle(int amountOfElements, int guarantee, String material, String typeOfPazzle) {
+		this(amountOfElements, guarantee, material, typeOfPazzle, null, 0, 0, null, null);
+	}
+
+	public Mechanical3DPuzzle(int amountOfElements, int guaranteeInMounts, String material, String typeOfPazzle,
+			String colour, double priceInHrynnia, double weightInGrams, String childAge, String description) {
 		this.amountOfElements = amountOfElements;
 		this.guaranteeInMounts = guaranteeInMounts;
 		this.material = material;
@@ -22,15 +30,8 @@ public class Mechanical3DPuzzle {
 		this.colour = colour;
 		this.priceInHrynnia = priceInHrynnia;
 		this.weightInGrams = weightInGrams;
-		this.age = age;
+		this.childAge = childAge;
 		this.description = description;
-	}
-
-	public Mechanical3DPuzzle(int amountOfElements, int guarantee, String material, String typeOfPazzle) {
-		this(amountOfElements, guarantee, material, typeOfPazzle, null, 0, 0, null, null);
-	}
-
-	public Mechanical3DPuzzle() {
 	}
 
 	public int getAmountOfElements() {
@@ -89,12 +90,12 @@ public class Mechanical3DPuzzle {
 		this.weightInGrams = weightInGrams;
 	}
 
-	public String getAge() {
-		return age;
+	public String getChildAge() {
+		return childAge;
 	}
 
-	public void setAge(String age) {
-		this.age = age;
+	public void setChildAge(String childAge) {
+		this.childAge = childAge;
 	}
 
 	public String getDescription() {
@@ -113,8 +114,8 @@ public class Mechanical3DPuzzle {
 		Mechanical3DPuzzle.id = id;
 	}
 
-	public void resetValues(int amountOfElements, int guaranteeInMounts, String material, String typeOfPazzle, String colour,
-			double priceInHrynnia, double weightInGrams, String age, String description) {
+	public void resetValues(int amountOfElements, int guaranteeInMounts, String material, String typeOfPazzle,
+			String colour, double priceInHrynnia, double weightInGrams, String childAge, String description) {
 		this.amountOfElements = amountOfElements;
 		this.guaranteeInMounts = guaranteeInMounts;
 		this.material = material;
@@ -122,7 +123,7 @@ public class Mechanical3DPuzzle {
 		this.colour = colour;
 		this.priceInHrynnia = priceInHrynnia;
 		this.weightInGrams = weightInGrams;
-		this.age = age;
+		this.childAge = childAge;
 		this.description = description;
 	}
 
@@ -136,11 +137,10 @@ public class Mechanical3DPuzzle {
 
 	@Override
 	public String toString() {
-		return "Mechanical3DPuzzle [amountOfElements=" + amountOfElements + "\n"
-				+ ", guaranteeInMounts=" + guaranteeInMounts + ", material=" + material + "\n" 
-				+  ", typeOfPazzle=" + typeOfPazzle + ", colour=" + colour + "\n"
-				+ ", priceInHrynnia=" + priceInHrynnia + ", weightInGrams=" + weightInGrams + "\n"
-				+ ", age=" + age + ", description=" + description + "]";
+		return "Mechanical3DPuzzle [amountOfElements=" + amountOfElements + "\n" + ", guaranteeInMounts="
+				+ guaranteeInMounts + ", material=" + material + "\n" + ", typeOfPazzle=" + typeOfPazzle + ", colour="
+				+ colour + "\n" + ", priceInHrynnia=" + priceInHrynnia + ", weightInGrams=" + weightInGrams + "\n"
+				+ ", Child's age=" + childAge + ", description=" + description + "]";
 	}
 
 }

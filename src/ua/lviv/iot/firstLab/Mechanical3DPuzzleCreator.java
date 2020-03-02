@@ -22,6 +22,6 @@ public class Mechanical3DPuzzleCreator {
 			System.out.println("_______________TRAIN_PUZZLE_______________");
 			System.out.println(trainPuzzle);
 		}
-		}
+	}
 }
 
