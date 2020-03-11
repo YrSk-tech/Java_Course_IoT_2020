@@ -19,8 +19,12 @@ public class Mechanical3DPuzzleCreator {
 			Mechanical3DPuzzle trainPuzzle = new Mechanical3DPuzzle(320 + 5 * i, 12, "wood", "train", "wooden",
 					310 + 2 * i, 310 + 3 * i, "13+", "Train which can move on rails.");
 			trainPuzzles[i] = trainPuzzle;
+			
+		}
+		for (Mechanical3DPuzzle trainPuzzle1 :  trainPuzzles) {
 			System.out.println("_______________TRAIN_PUZZLE_______________");
-			System.out.println(trainPuzzle);
+			System.out.println(trainPuzzle1);
+			
 		}
 	}
 }
